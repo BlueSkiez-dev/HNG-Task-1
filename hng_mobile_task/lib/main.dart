@@ -150,7 +150,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       GestureDetector(
                         onTap: () async {
-                          var url = "https://internship.zuri.team/";
+                          var url = "https://ingressive.org/";
                           if (await canLaunch(url)) {
                             await launch(url);
                           } else {
@@ -170,6 +170,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                       GestureDetector(
+                        onTap: () async {
+                          var url = "https://internship.zuri.team/";
+                          if (await canLaunch(url)) {
+                            await launch(url);
+                          } else {
+                            throw 'Could not launch $url';
+                          }
+                        },
                         child: Container(
                           height: 34.0,
                           width: 34.0,
